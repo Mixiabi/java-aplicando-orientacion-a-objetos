@@ -1,22 +1,79 @@
+package com.alura.screenmatch.modelos;
+import java.util.*;
 public class Pelicula {
-    String nombre;
-    int fecLanzamiento;
-    int duracionMinutos;
-    boolean planIncluido;
+    private String nombre;
+    private int fecLanzamiento;
+    private int duracionMinutos;
+    private boolean planIncluido;
     private double sumaPuntuaciones;
     private int totalPuntuaciones;
 
-    int getTotalPuntuaciones(){
-        return totalPuntuaciones;
+
+//////////////////////////////////////////////////////////////////
+    public String getNombre() {
+        return nombre;
+    }
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+/////////////////////////////////////////////////////////////////
+    public int getFecLanzamiento() {
+        return fecLanzamiento;
+    }
+    public void setFecLanzamiento(int fecLanzamiento) {
+        this.fecLanzamiento = fecLanzamiento;
+    }
+///////////////////////////////////////////////////////////////////////
+    public int getDuracionMinutos() {
+        return duracionMinutos;
+    }
+    public void setDuracionMinutos(int duracionMinutos) {
+        this.duracionMinutos = duracionMinutos;
+    }
+/////////////////////////////////////////////////////////////////////////
+    public boolean getPlanIncluido() {
+        return planIncluido;
+    }
+    public void setPlanIncluido(boolean planIncluido) {
+        this.planIncluido = planIncluido;
     }
 
-    void fichaTecnica(){
-        System.out.println("Pelicula: " + nombre);
-        System.out.println("Año de fecLanzamiento: " + fecLanzamiento);
-        System.out.println("Incluido en el Plan: " + planIncluido);
+
+
+
+
+
+
+
+/**
+ /////////////////////////////////////////////////////////////////////
+//    public double getSumaPuntuaciones() {
+//        return sumaPuntuaciones;
+//    }
+////////////////////////////////////////////////////////////////////
+//    public int getTotalPuntuaciones(){
+//        return totalPuntuaciones;
+//    }
+/////////////////////////////////////////////////////////////////////
+*/
+
+    public void fichaTecnica(){
+        System.out.printf("""
+                \nPelicula: %s
+                Año de Lanzamiento: %d
+                Duracion: %d
+                Incluido en el Plan: %b
+                Puntuacion total: %.1f \n
+                """,
+                getNombre(),
+                getFecLanzamiento(),
+                getDuracionMinutos(),
+                getPlanIncluido(),
+                mediaPuntuaciones());
     }
 
-    void evaluacion(double nota){
+
+    public void evaluacion(double nota){
 
         sumaPuntuaciones = sumaPuntuaciones + nota;
         totalPuntuaciones++;
@@ -26,4 +83,5 @@ public class Pelicula {
         return sumaPuntuaciones/totalPuntuaciones;
 
     }
+
 }

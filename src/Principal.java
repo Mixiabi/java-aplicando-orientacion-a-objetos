@@ -1,20 +1,26 @@
+import com.alura.screenmatch.modelos.Pelicula;
+import com.alura.screenmatch.modelos.Series;
+
 public class Principal {
     public static void main(String[] args){
 
         Pelicula miPelicula = new Pelicula();
 
-        miPelicula.nombre = "Matrix";
-        miPelicula.fecLanzamiento = 1998;
-        miPelicula.duracionMinutos = 120;
-        miPelicula.fichaTecnica();
+        miPelicula.setNombre("Matrix");
+        miPelicula.setFecLanzamiento(1998);
+        miPelicula.setDuracionMinutos(120);
+        miPelicula.setPlanIncluido(true);
         miPelicula.evaluacion(5);
-        miPelicula.evaluacion(2.3);
-        miPelicula.evaluacion(6.1);
-        miPelicula.evaluacion(4.2);
-        miPelicula.evaluacion(1.8);
-        System.out.println("Total de evaluaciones: " + miPelicula.getTotalPuntuaciones());
-        System.out.println("La media de evaluacion es de: " + miPelicula.mediaPuntuaciones());
+
+        miPelicula.fichaTecnica();
+
+        Series miSerie = new Series();
+        miSerie.setNombre("Friends");
+        miSerie.setFecLanzamiento(2001);
+        miSerie.setDuracionMinutos(11);
+        miSerie.setPlanIncluido(false);
 
 
+        miSerie.fichaTecnica();
     }
 }
