@@ -1,5 +1,6 @@
 package com.alura.screenmatch.modelos;
 
+
 public class Titulo {
     private String nombre;
     private int fecLanzamiento;
@@ -40,28 +41,11 @@ public class Titulo {
 
 
 
-
-
-
-
-
-    /**
-     /////////////////////////////////////////////////////////////////////
-     //    public double getSumaPuntuaciones() {
-     //        return sumaPuntuaciones;
-     //    }
-     ////////////////////////////////////////////////////////////////////
-     //    public int getTotalPuntuaciones(){
-     //        return totalPuntuaciones;
-     //    }
-     /////////////////////////////////////////////////////////////////////
-     */
-
-    public void fichaTecnica(){
+    public void fichaTecnicaPelicula(){
         System.out.printf("""
                 \nPelicula: %s
                 Año de Lanzamiento: %d
-                Duracion: %d
+                Duracion: %d minutos
                 Incluido en el Plan: %b
                 Puntuacion total: %.1f \n
                 """,
@@ -74,13 +58,11 @@ public class Titulo {
 
 
     public void evaluacion(double nota){
-
         sumaPuntuaciones = sumaPuntuaciones + nota;
         totalPuntuaciones++;
     }
 
-    double mediaPuntuaciones(){
+    public double mediaPuntuaciones(){
         return sumaPuntuaciones/totalPuntuaciones;
-
     }
 }

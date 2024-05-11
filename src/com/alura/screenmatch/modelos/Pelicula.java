@@ -1,6 +1,6 @@
 package com.alura.screenmatch.modelos;
 import java.util.*;
-public class Pelicula {
+public class Pelicula extends Titulo{
     private String filmDirector;
 
     public String getFilmDirector() {
