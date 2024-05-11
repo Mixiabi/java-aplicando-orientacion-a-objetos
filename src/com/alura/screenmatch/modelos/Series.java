@@ -1,61 +1,32 @@
 package com.alura.screenmatch.modelos;
 
 public class Series {
-    String nombre;
-    private int fecLanzamiento;
-    private int duracionMinutos;
-    private boolean planIncluido;
-    private double sumaPuntuaciones;
-    private int totalPuntuaciones;
+    private int temporadas;
+    private int episodioByTemporada;
+    private int minutosByEpisodio;
 
-    public int getDuracionMinutos() {
-        return duracionMinutos;
+    public int getTemporadas() {
+        return temporadas;
     }
 
-    public void setDuracionMinutos(int duracionMinutos) {
-        this.duracionMinutos = duracionMinutos;
+    public void setTemporadas(int temporadas) {
+        this.temporadas = temporadas;
     }
 
-    public int getFecLanzamiento() {
-        return fecLanzamiento;
+    public int getEpisodioByTemporada() {
+        return episodioByTemporada;
     }
 
-    public void setFecLanzamiento(int fecLanzamiento) {
-        this.fecLanzamiento = fecLanzamiento;
+    public void setEpisodioByTemporada(int episodioByTemporada) {
+        this.episodioByTemporada = episodioByTemporada;
     }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public boolean getPlanIncluido() {
-        return planIncluido;
-    }
-
-    public void setPlanIncluido(boolean planIncluido) {
-        this.planIncluido = planIncluido;
-    }
-
-    public void fichaTecnica(){
-        System.out.printf("""
-                \nPelicula: %s
-                Año de Lanzamiento: %d
-                Duracion: %d
-                Incluido en el Plan: %b \n
-                """, getNombre(), getFecLanzamiento(), getDuracionMinutos(), getPlanIncluido());
-//
-//        Puntuacion total: %.1f
-    }
-
-    public void evaluacion(double nota){
-
-        sumaPuntuaciones = sumaPuntuaciones + nota;
-        totalPuntuaciones++;
-    }
-
-
 }
+    public int getMinutosByEpisodio() {
+        return minutosByEpisodio;
+    }
+
+    public void setMinutosByEpisodio(int minutosByEpisodio) {
+        this.minutosByEpisodio = minutosByEpisodio;
+    }
+
+
