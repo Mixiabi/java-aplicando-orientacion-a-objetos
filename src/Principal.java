@@ -1,6 +1,6 @@
 import com.alura.screenmatch.modelos.Series;
 import com.alura.screenmatch.modelos.Titulo;
-
+import com.alura.screenmatch.calculos.TiempoCalculado;
 public class Principal {
     public static void main(String[] args){
 
@@ -10,8 +10,8 @@ public class Principal {
         miPelicula.setDuracionMinutos(120);
         miPelicula.setPlanIncluido(true);
         miPelicula.evaluacion(5);
-        miPelicula.fichaTecnicaPelicula();
 
+        miPelicula.fichaTecnicaPelicula();
 
         Series nuevaSerie = new Series();
         nuevaSerie.setNombre("Friends");
@@ -21,6 +21,15 @@ public class Principal {
         nuevaSerie.setMinutosByEpisodio(22);
         nuevaSerie.evaluacion(10);
         nuevaSerie.setPlanIncluido(false);
+
         nuevaSerie.fichaTecnicaSeries();
+
+        TiempoCalculado calculaTiempos = new TiempoCalculado();
+        calculaTiempos.incluyeTiempos(miPelicula);
+        calculaTiempos.incluyeTiempos(nuevaSerie);
+        System.out.println(calculaTiempos.getTiempoTotal());
+
+
     }
+
 }
