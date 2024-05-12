@@ -14,4 +14,7 @@ public class TiempoCalculado {
         this.tiempoTotal = tiempoTotal + titulo.getDuracionMinutos();
     }
 
+    public void tiempos(){
+        System.out.printf("tiempo total para ver toda tu lista: %d",getTiempoTotal());
+    }
 }

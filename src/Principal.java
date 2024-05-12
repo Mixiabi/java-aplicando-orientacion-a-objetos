@@ -19,17 +19,26 @@ public class Principal {
         nuevaSerie.setTemporadas(10);
         nuevaSerie.setEpisodioByTemporada(24);
         nuevaSerie.setMinutosByEpisodio(22);
-        nuevaSerie.evaluacion(10);
+        nuevaSerie.evaluacion(4.5);
         nuevaSerie.setPlanIncluido(false);
 
         nuevaSerie.fichaTecnicaSeries();
 
+        Titulo otraPelicula = new Titulo();
+        otraPelicula.setNombre("Constantine");
+        otraPelicula.setFecLanzamiento(2005);
+        otraPelicula.setDuracionMinutos(121);
+        otraPelicula.setPlanIncluido(true);
+        otraPelicula.evaluacion(5);
+
+        otraPelicula.fichaTecnicaPelicula();
+
         TiempoCalculado calculaTiempos = new TiempoCalculado();
         calculaTiempos.incluyeTiempos(miPelicula);
         calculaTiempos.incluyeTiempos(nuevaSerie);
-        System.out.println(calculaTiempos.getTiempoTotal());
+        calculaTiempos.incluyeTiempos(otraPelicula);
 
-
+        calculaTiempos.tiempos();
     }
 
 }
