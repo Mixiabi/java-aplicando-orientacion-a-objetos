@@ -1,6 +1,8 @@
 package com.alura.screenmatch.modelos;
 
-public class Series extends Titulo{
+import com.alura.screenmatch.calculos.Clasificando;
+
+public class Series extends Titulo {
     private int temporadas;
     private int episodioByTemporada;
     private int minutosByEpisodio;
@@ -9,6 +11,7 @@ public class Series extends Titulo{
     public int getDuracionMinutos() {
         return temporadas * episodioByTemporada * minutosByEpisodio;
     }
+
 
     @Override
     public void evaluacion(double nota) {

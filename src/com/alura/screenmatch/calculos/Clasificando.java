@@ -1,4 +1,5 @@
 package com.alura.screenmatch.calculos;
 
-public class Clasificando {
+public interface Clasificando {
+    int getClasificando();
 }
