@@ -7,17 +7,17 @@ public class Series extends Titulo {
     private int episodioByTemporada;
     private int minutosByEpisodio;
 
+//TOTAL MINUTOS EN SERIE
     @Override
     public int getDuracionMinutos() {
         return temporadas * episodioByTemporada * minutosByEpisodio;
     }
-
-
+//NOTAS PARA LA SERIE SUMA PUNTUACIONES Y ACUMULA PUNTUACIONES
     @Override
     public void evaluacion(double nota) {
         super.evaluacion(nota);
     }
-
+//DIVIDE SUMA PUNTUACION / PUNTUACION ACUMULADA
     @Override
     public double mediaPuntuaciones() {
         return super.mediaPuntuaciones();

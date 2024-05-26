@@ -15,6 +15,6 @@ public class TiempoCalculado {
     }
 
     public void tiempos(){
-        System.out.printf("tiempo total para ver toda tu lista: %d",getTiempoTotal());
+        System.out.printf("tiempo total para ver toda tu lista: %d \n" ,getTiempoTotal());
     }
 }

@@ -1,7 +1,8 @@
 package com.alura.screenmatch.modelos;
 
+import com.alura.screenmatch.calculos.Clasificando;
 
-public class Titulo {
+public class Titulo implements Clasificando {
     private String nombre;
     private int fecLanzamiento;
     private int duracionMinutos;
@@ -39,8 +40,6 @@ public class Titulo {
         this.planIncluido = planIncluido;
     }
 
-
-
     public void fichaTecnicaPelicula(){
         System.out.printf("""
                 \nPelicula: %s
@@ -64,5 +63,10 @@ public class Titulo {
 
     public double mediaPuntuaciones(){
         return sumaPuntuaciones/totalPuntuaciones;
+    }
+
+    @Override
+    public int getClasificando() {
+        return (int) (mediaPuntuaciones()/2);
     }
 }

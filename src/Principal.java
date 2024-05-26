@@ -1,3 +1,5 @@
+import com.alura.screenmatch.calculos.FiltroRecomendacion;
+import com.alura.screenmatch.modelos.Episodio;
 import com.alura.screenmatch.modelos.Series;
 import com.alura.screenmatch.modelos.Titulo;
 import com.alura.screenmatch.calculos.TiempoCalculado;
@@ -13,16 +15,19 @@ public class Principal {
 
         miPelicula.fichaTecnicaPelicula();
 
-        Series nuevaSerie = new Series();
-        nuevaSerie.setNombre("Friends");
-        nuevaSerie.setFecLanzamiento(2001);
-        nuevaSerie.setTemporadas(10);
-        nuevaSerie.setEpisodioByTemporada(24);
-        nuevaSerie.setMinutosByEpisodio(22);
-        nuevaSerie.evaluacion(4.5);
-        nuevaSerie.setPlanIncluido(false);
+        Series friends = new Series();
+        friends.setNombre("Friends");
+        friends.setFecLanzamiento(2001);
+        friends.setTemporadas(10);
+        friends.setEpisodioByTemporada(24);
+        friends.setMinutosByEpisodio(22);
+        friends.evaluacion(4.5);
+        friends.evaluacion(4.5);
+        friends.evaluacion(4.5);
+        friends.evaluacion(4.5);
+        friends.setPlanIncluido(false);
 
-        nuevaSerie.fichaTecnicaSeries();
+        friends.fichaTecnicaSeries();
 
         Titulo otraPelicula = new Titulo();
         otraPelicula.setNombre("Constantine");
@@ -35,10 +40,24 @@ public class Principal {
 
         TiempoCalculado calculaTiempos = new TiempoCalculado();
         calculaTiempos.incluyeTiempos(miPelicula);
-        calculaTiempos.incluyeTiempos(nuevaSerie);
+        calculaTiempos.incluyeTiempos(friends);
         calculaTiempos.incluyeTiempos(otraPelicula);
 
         calculaTiempos.tiempos();
+
+        FiltroRecomendacion filtroRecomendacion = new FiltroRecomendacion();
+        filtroRecomendacion.filtra(miPelicula);
+
+//        Clasificando eclipse = new Episodio();
+        Episodio episodio = new Episodio();
+        episodio.setNumero(1);
+        episodio.setNombre("El piloto");
+        episodio.setSeries(friends);
+        episodio.setTotalVisualizaciones(300);
+        filtroRecomendacion.filtra(episodio);
+
+
+
     }
 
 }

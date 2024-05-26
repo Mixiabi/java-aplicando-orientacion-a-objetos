@@ -1,7 +1,7 @@
 package com.alura.screenmatch.modelos;
 import com.alura.screenmatch.calculos.Clasificando;
 
-public class Pelicula extends Titulo implements Clasificando {
+public class Pelicula extends Titulo{
     private String filmDirector;
 
     public String getFilmDirector() {
@@ -12,9 +12,4 @@ public class Pelicula extends Titulo implements Clasificando {
         this.filmDirector = filmDirector;
     }
 
-//REFUNDICION o CASTEO
-    @Override
-    public int getClasificando(){
-        return (int) (mediaPuntuaciones()/2);
-    }
 }
